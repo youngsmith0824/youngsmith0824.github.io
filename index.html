@@ -65,9 +65,19 @@
 
             $("#d-day").html(result);
         });
+
+        function pop()
+        {
+            var popupWidth = 400;
+            var popupHeight = 500;
+            var popupX = (window.screen.width / 2) - (popupWidth / 2);
+            var popupY= (window.screen.height / 2) - (popupHeight / 2);
+            console.log(`${popupX}, ${popupY}`)
+            window.open("notification.html", "공지사항", `width=${popupWidth},height=${popupHeight},history=no,status=no,scrollbars=yes,menubar=no,left=${popupX},top=${popupY}`)
+        }
     </script>
 </head>
-<body class="text-center">
+<body class="text-center" onLoad="javascript:pop()">
 <div class="top-div">
     <header class="inner cover cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <h1 class="wow fadeIn cover-heading" style="text-align: right; margin-top: 0.5em; margin-right: 0.5em; font-size: 2rem;">
